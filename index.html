@@ -191,7 +191,7 @@
                         </li>
                     </ul>                    
                     <div class="subheading mb-3 mt-3">I'm <span class="text-primary">Available</span> for freelancing</div><button type='button' class='btn btn-dark' data-toggle="modal" data-target="#myModal">Hire Me</button>
-                    <form name="contact-form">
+                    <form name="contact-form" action="https://script.google.com/macros/s/AKfycby9gEDRBFLOyizpkYa0Qmh9Tz_6OEJ6nydTNRx8/exec">
                         <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
@@ -203,22 +203,22 @@
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="name" name="contact[name]" placeholder="Your name" required>                                            
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>                                            
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="email" name="contact[email]" placeholder="Your email" required>                                            
+                                            <input type="text" class="form-control" id="email" name="email" placeholder="Your email" required>                                            
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="subject" name="contact[subject]" placeholder="Subject" required>                                            
+                                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>                                            
                                         </div>
                                         <div class="form-group">
-                                            <textarea id="message" name="contact[message]" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>                                            
+                                            <textarea id="message" name="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>                                            
                                         </div>
                                     </div>
                                     <!-- Modal footer -->
                                     <div class="modal-footer">
                                         <div id="div-alert" class="mr-auto" style="display:none;"></div>
-                                        <button id="send-msg" type="submit" class="btn btn-success">Send Message</button>                                        
+                                        <button id="send-msg" type="submit" class="btn btn-success"><i class="fa fa-paper-plane"></i> Send Message</button>                                        
                                     </div>
                                 </div>
                             </div>
@@ -280,26 +280,25 @@
                         message: "Please enter the message"
                     },
                     submitHandler: function (form) {
-                        var HTTP_ROOT = document.location.origin + "/portfolio";
-                        var url = HTTP_ROOT + "/SendMail.php";
+                        var url = form.action;
                         $.ajax({
                             url: url,
                             type: "POST",
+                            contentType: 'application/x-www-form-urlencoded',
                             data: $(form).serialize(),
                             beforeSend: function () {
                                 $('#send-msg').html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...');
                                 $('#send-msg').attr("disabled", true);
                             },
-                            success: function (response) {
-                                var res = JSON.parse(response);
+                            success: function (response, textStatus, xhr) {
                                 var alertClass = null;
                                 var alertMsg = null;
-                                if (res.status === 'SUCCESS') {
+                                if (xhr.status === 200) {
                                     alertClass = 'alert alert-success';
-                                    alertMsg = res.message;
+                                    alertMsg = '<strong>Thank you!</strong> We will contact you soon';
                                 } else {
                                     alertClass = 'alert alert-danger';
-                                    alertMsg = res.message;
+                                    alertMsg = '<strong>Oops!</strong> Someting went wrong';
                                 }
                                 $("#div-alert").addClass(alertClass);
                                 $("#div-alert").html(alertMsg);
@@ -309,11 +308,12 @@
                                     $("#div-alert").html('');
                                     $("#div-alert").removeClass(alertClass);
                                     $("#div-alert").hide();
+                                    $("#myModal").modal('toggle');
                                 });
                             },
                             error: function () {
                                 $("#div-alert").addClass('alert alert-danger');
-                                $("#div-alert").html('Oops! Something went wrong');
+                                $("#div-alert").html('<strong>Oops!</strong> Something went wrong');
                                 $("#div-alert").show();
                                 $("#div-alert").fadeTo(5000, 500).slideUp(500, function () {
                                     $("#div-alert").slideUp(500);
