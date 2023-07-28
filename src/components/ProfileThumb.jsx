@@ -5,10 +5,10 @@ import { useEffect } from "react";
 
 function ProfileThumb() {
   const photo = {
-    background: `url(src/assets/images/${Profile.photo})`,
+    background: `url(/assets/images/${Profile.photo})`,
   };
   useEffect(() => contentWayPoint(), []);
-  
+
   return (
     <div
       className="display-tc js-fullheight animate-box"

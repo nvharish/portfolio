@@ -1,7 +1,7 @@
 import ProfileThumb from "./ProfileThumb";
 
 function Header() {
-    const cover=`src/assets/images/cover_bg_3.jpg`;
+    const cover=`/assets/images/cover_bg_3.jpg`;
   return (
     <header
       id="fh5co-header"
