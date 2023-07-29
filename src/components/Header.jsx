@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import ProfileThumb from "./ProfileThumb";
 import { isMobile } from "../utils/constants";
+import { contentWayPoint } from "../utils/common";
 
 const fullHeight = function () {
   if (!isMobile.any()) {
@@ -12,8 +13,13 @@ const fullHeight = function () {
 };
 
 function Header() {
-  useEffect(() => fullHeight(), []);
+  useEffect(() => {
+    fullHeight();
+    contentWayPoint();
+  }, []);
+
   const cover = `/assets/images/cover_bg_3.jpg`;
+  
   return (
     <header
       id="fh5co-header"
