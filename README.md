@@ -42,7 +42,7 @@ Welcome to my personal portfolio website. This project showcases my skills, expe
 - **Deployment**:
   - AWS (Amazon Web Services)
 
-## Installation
+## For local development and testing
 
 To run this project locally, follow these steps:
 
@@ -51,7 +51,83 @@ To run this project locally, follow these steps:
    git clone https://github.com/nvharish/portfolio.git
    cd portfolio
    ```
-2. **Clone the repository**:
+2. **Install dependencies**:
    ```bash
    npm install
    ```
+3. **Run the development server**:
+   ```bash
+   npm run start
+   ```
+4. **Run the test cases**:
+   ```bash
+   npm run test
+   ```
+
+## Usage
+
+The portfolio website is live and can be accessed at: [https://nvharish.com](https://nvharish.com).
+
+You can explore the following sections:
+
+- **Home**: A brief introduction to who I am and what I do.
+- **Projects**: A collection of my featured work, including links to live demos and GitHub repositories.
+- **Skills**: A list of technical skills, programming languages, and tools I use regularly.
+- **Contact**: A form where you can send me messages or inquiries directly.
+
+## Project Structure
+
+The project directory is organized as follows:
+
+```plaintext
+portfolio/
+│
+├── src/
+│   ├── components/         # React components
+│   │   ├── App.js
+│   │   └── Header.js
+│   │
+│   ├── views/              # Server-side views (React entry point for SSR)
+│   │   └── index.js        # Renders React app to string and injects into HTML
+│   │
+│   ├── server/             # Server-side code (Express.js)
+│   │   ├── index.js        # Main entry point for the Express server
+│   │   └── routes.js       # Express routes
+│   │
+│   ├── public/             # Public assets (static files like images, CSS)
+│   │   ├── css/
+│   │   └── js/
+│   │
+│   └── utils/              # Utility functions (e.g., error handling, data fetching)
+│       └── fetchData.js
+│
+├── build/                  # Bundled static files for production
+│
+├── node_modules/           # Node.js packages
+│
+├── .babelrc                # Babel configuration
+├── webpack.config.js       # Webpack configuration (for bundling assets)
+├── package.json            # Package dependencies
+└── README.md               # Documentation
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Feel free to use, modify, and distribute this project under the terms of the MIT License. The software is provided "as is," without warranty of any kind, express or implied. For more information, refer to the full text of the MIT License in the `LICENSE` file.
+
+## Contact
+
+If you have any questions, suggestions, or would like to discuss potential collaborations, feel free to reach out to me through the following channels:
+
+- **Email**: [nv.harish@outlook.com](mailto:nv.harish@outlook.com)
+- **LinkedIn**: [linkedin.com/in/nvharish](https://www.linkedin.com/in/nvharish)
+- **GitHub**: [github.com/nvharish](https://github.com/nvharish)
+- **Portfolio Website**: [https://nvharish.com](https://nvharish.com)
+
+I look forward to connecting with you!
+
+```
+
+```
