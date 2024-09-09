@@ -6,7 +6,7 @@ Welcome to my personal portfolio website. This project showcases my skills, expe
 
 - [Features](#features)
 - [Technologies](#technologies)
-- [Installation](#installation)
+- [For local development and testing](#For-local-development-and-testing)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [License](#license)
