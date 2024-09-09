@@ -1,0 +1,66 @@
+{
+  "name": "portfolio",
+  "version": "3.0.0",
+  "description": "My online resume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nvharish/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "web",
+    "development",
+    "frontend",
+    "backend",
+    "full",
+    "stack",
+    "JavaScript",
+    "Node.js",
+    "React",
+    "HTML",
+    "CSS",
+    "Bootstrap",
+    "REST",
+    "API",
+    "personal",
+    "website",
+    "developer",
+    "projects",
+    "showcase",
+    "responsive",
+    "design",
+    "Express.js",
+    "Mocha",
+    "Chai",
+    "Jest",
+    "SQL",
+    "Sequelize.js",
+    "Docker",
+    "AWS",
+    "Kubernetes",
+    "Git",
+    "CI/CD",
+    "IAAS"
+  ],
+  "author": "N V Harish",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nvharish/portfolio/issues"
+  },
+  "homepage": "https://github.com/nvharish/portfolio#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "express": "^4.19.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "webpack": "^5.94.0"
+  }
+}
