@@ -71,6 +71,7 @@ The portfolio website is live and can be accessed at: [https://nvharish.com](htt
 You can explore the following sections:
 
 - **Home**: A brief introduction to who I am and what I do.
+- **Experience**: Details about my professional experience, roles, and accomplishments.
 - **Projects**: A collection of my featured work, including links to live demos and GitHub repositories.
 - **Skills**: A list of technical skills, programming languages, and tools I use regularly.
 - **Contact**: A form where you can send me messages or inquiries directly.
