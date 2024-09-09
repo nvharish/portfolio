@@ -127,7 +127,3 @@ If you have any questions, suggestions, or would like to discuss potential colla
 - **Portfolio Website**: [https://nvharish.com](https://nvharish.com)
 
 I look forward to connecting with you!
-
-```
-
-```
